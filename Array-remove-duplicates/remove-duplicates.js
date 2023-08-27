@@ -5,10 +5,10 @@ const getUniqueValues = (arrOfNum) => {
      
     let uniqueArray = [];
 
-        //loop for all item in oregenal array 
+        //loop for all item in original array
      for( num of arrOfNum){
 
-         //check if item avalable in new array 
+        //check if item available in new array
         let isNumberExist = false ;  
         for(unique of uniqueArray){
 
@@ -19,7 +19,7 @@ const getUniqueValues = (arrOfNum) => {
             }
         }
 
-        //add item to new array if item does not exist 
+        //add item to new array if item does not exist before 
         if(!isNumberExist){
             uniqueArray.push(num);
         }    
