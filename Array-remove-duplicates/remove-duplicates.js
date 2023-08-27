@@ -14,7 +14,7 @@ const getUniqueValues = (arrOfNum) => {
 
             if(num === unique){
                 isNumberExist = true;
-                console.log('num === unique');
+               // console.log('num === unique');
                 break ; 
             }
         }
