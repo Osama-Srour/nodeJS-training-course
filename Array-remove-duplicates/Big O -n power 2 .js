@@ -21,7 +21,7 @@ const getUniqueValues = (arrOfNum) => {
 
         //add item to new array if item does not exist before 
         if(!isNumberExist){
-            uniqueArray.push(num);
+            uniqueArray[uniqueArray.length]= num;
         }    
      }
 
