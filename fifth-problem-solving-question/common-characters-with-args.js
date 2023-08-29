@@ -23,4 +23,4 @@ const commonCharacters = (...args) => {
     }
 };
 
-console.log(commonCharacters('ddcc', 'dccd' , 'cdab' , 'dcefg','abcd')); // aeiou
+console.log(commonCharacters('ddcc', 'dccd' , 'cdab' , 'dcefg','abcd')); 
