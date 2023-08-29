@@ -18,9 +18,9 @@ const commonCharacters = (...args) => {
 
             //if more than 2 call the funcation again 
     }else if(args.length > 2){
-        args.shift(); 
-        return commonCharacters.apply(null,args);
+        let str1 = args.shift(); 
+        return commonCharacters.apply(str1,args);
     }
 };
 
-console.log(commonCharacters('Osama maher Issa Sruor', 'Osama maher Issa Sruor' , 'Osama maher Issa Sruor' , 'Osama maher Issa Sruor','abcd')); // aeiou
+console.log(commonCharacters('ddcc', 'dccd' , 'cdab' , 'dcefg','abcd')); // aeiou
