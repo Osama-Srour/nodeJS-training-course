@@ -75,7 +75,7 @@
     <div class="container">
         <div class="info">
             <h2>Host Name:</h2>
-            <p id="osInfo">
+            <p id="hostInfo">
             <%= info.hostname %></p>
             <h2>Operating System:</h2>
             <p id="osInfo"><%= info.operation_system +" "+info.arch %></p>
@@ -89,10 +89,27 @@
             <p id="totalMemory"><%= info.ram %></p>
         </div>
     </div>
+
+    <button id = "exportbtn"> export to text file </button>
     <script>
 
+    
+
         const container = document.getElementsByClassName("container")[0];
-        
+
+        //getdatabyID
+        const hostInfo = document.getElementById("hostInfo").innerHTML.trim()
+        const osInfo = document.getElementById("osInfo").innerHTML
+        const cpuInfo = document.getElementById("cpuInfo").innerHTML
+        const totalMemory = document.getElementById("totalMemory").innerHTML
+
+        const str =
+`   Host Name: ${hostInfo}
+    Operating System:${osInfo}
+    CPU:${cpuInfo}
+    Total Memory:${ totalMemory }`;
+
+                
         const btn = document.querySelector("button");
         btn.addEventListener("click",(event) => {
 
@@ -104,9 +121,17 @@
             }
         })
 
-            
+        const btn2 = document.querySelector("#exportbtn")
+        btn2.addEventListener('click', (even) => {
+            window.location.href = 'http://localhost:3000/Exportdata'; 
+        })
+
+
+                    
 
     </script>
 </body>
 
 </html>
+
+

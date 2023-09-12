@@ -1,0 +1,4 @@
+Hostname: LAPTOP-MIABDPEK
+    operation_system : Windows_NT 
+    cpu : Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
+    ram: 672.96 MB free of : 7.88 GB
