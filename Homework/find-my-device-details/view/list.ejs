@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+    
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+    
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        button:hover {
+            background-color: #0056b3;
+        }
+    
+        .info {
+            margin-top: 20px;
+        }
+    
+        h2 {
+            color: #555;
+        }
+    
+        p {
+            margin: 0;
+            font-weight: bold;
+        }
+    
+        .hidden {
+            display: none;
+        }
+    
+        /* Add more CSS styles as needed */
+    </style>
+
+
+    
+</head>
+
+<body>
+
+    <h1 class = "title">PC Information</h1>
+    <button> Ckechk your PC Information </button>
+
+    <div class="container">
+        <div class="info">
+            <h2>Operating System:</h2>
+            <p id="osInfo"><%= info.operation_system +" "+info.arch %></p>
+        </div>
+        <div class="info">
+            <h2>CPU:</h2>
+            <p id="cpuInfo"><%= info.cpu %></p>
+        </div>
+        <div class="info">
+            <h2>Total Memory:</h2>
+            <p id="totalMemory"><%= info.ram %></p>
+        </div>
+    </div>
+    <script>
+
+        const container = document.getElementsByClassName("container")[0];
+        
+        const btn = document.querySelector("button");
+        btn.addEventListener("click",(event) => {
+
+            if (container.classList.contains("hidden")) {
+                container.classList.remove("hidden");
+                
+            } else {
+                container.classList.add("hidden");
+            }
+        })
+
+            
+
+    </script>
+</body>
+
+</html>
